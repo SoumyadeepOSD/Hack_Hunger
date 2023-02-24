@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
+import 'package:zero_hunger/Text.dart';
 import 'Button.dart';
 
 class HomePage extends StatefulWidget {
@@ -34,6 +35,7 @@ class _HomePageState extends State<HomePage> {
           child: SafeArea(
               child: Column(
             children: [
+              rohan(),
               Padding(
                 padding: EdgeInsets.fromLTRB(0, 20, 0, 10),
                 child: ListTile(
