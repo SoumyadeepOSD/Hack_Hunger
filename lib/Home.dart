@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
+import 'package:zero_hunger/TabPage/More.dart';
+import 'package:zero_hunger/TabPage/Profile.dart';
+import 'package:zero_hunger/screens/chat_screen.dart';
 import 'Button.dart';
 
 class HomePage extends StatefulWidget {
@@ -48,6 +51,10 @@ class _HomePageState extends State<HomePage> {
                   leading: Icon(Icons.home),
                   onTap: () {
                     //action when this menu is pressed
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ChatScreen()),
+                    );
                   },
                 ),
               ),
@@ -65,6 +72,10 @@ class _HomePageState extends State<HomePage> {
                   leading: Icon(Icons.person),
                   onTap: () {
                     //action when this menu is pressed
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Profile()),
+                    );
                   },
                 ),
               ),
@@ -73,7 +84,7 @@ class _HomePageState extends State<HomePage> {
                 child: ListTile(
                   dense: true,
                   title: Text(
-                    "My Orders",
+                    "AI Assistant",
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w600,
@@ -82,6 +93,10 @@ class _HomePageState extends State<HomePage> {
                   leading: Icon(Icons.add_box),
                   onTap: () {
                     //action when this menu is pressed
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ChatScreen()),
+                    );
                   },
                 ),
               ),
@@ -90,7 +105,7 @@ class _HomePageState extends State<HomePage> {
                 child: ListTile(
                   dense: true,
                   title: Text(
-                    "My Favourites",
+                    "More",
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w600,
@@ -99,6 +114,10 @@ class _HomePageState extends State<HomePage> {
                   leading: Icon(Icons.monitor_heart),
                   onTap: () {
                     //action when this menu is pressed
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => More()),
+                    );
                   },
                 ),
               ),
