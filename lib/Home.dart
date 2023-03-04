@@ -4,7 +4,7 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:zero_hunger/TabPage/More.dart';
 import 'package:zero_hunger/TabPage/Profile.dart';
-import 'package:zero_hunger/screens/chat_screen.dart';
+import 'TabPage/ChatScreen.dart';
 import 'Button.dart';
 
 class HomePage extends StatefulWidget {
