@@ -140,27 +140,27 @@ class _HomePageState extends State<HomePage> {
                   height: 150,
                   children: [
                     Image.asset(
-                      "assets/image1.png",
+                      "assets/images/image1.png",
                       fit: BoxFit.fitHeight,
                       height: 50,
                     ),
                     Image.asset(
-                      "assets/image2.png",
+                      "assets/images/image2.png",
                       fit: BoxFit.fitHeight,
                       height: 50,
                     ),
                     Image.asset(
-                      "assets/image3.jpg",
+                      "assets/images/image3.jpg",
                       fit: BoxFit.fitHeight,
                       height: 50,
                     ),
                     Image.asset(
-                      "assets/image4.jpg",
+                      "assets/images/image4.jpg",
                       fit: BoxFit.fitHeight,
                       height: 50,
                     ),
                     Image.asset(
-                      "assets/image5.jpg",
+                      "assets/images/image5.jpg",
                       fit: BoxFit.fitHeight,
                       height: 50,
                     ),
