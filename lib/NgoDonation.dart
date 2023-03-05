@@ -100,14 +100,12 @@ class NgoDonation extends StatelessWidget {
       required String message,
       required String veg}) async {
     final url =
-        'mailto:$toEmail?subject=${Uri.encodeFull(subject)}&body=${Uri.encodeFull("To the" + name + "\nDonation for " + veg + "\nName of food is " + message)}';
+        'mailto:$toEmail?subject=${Uri.encodeFull(subject)}&body=${Uri.encodeFull("\nDonation for " + veg + "\nName of food is " + message)}';
 
     // ignore: deprecated_member_use
     if (await canLaunch(url)) {
       // ignore: deprecated_member_use
-      if (toEmail != null && subject != null && message != null) {
-        await launch(url);
-      }
+      await launch(url);
     }
   }
 }
