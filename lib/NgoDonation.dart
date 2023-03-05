@@ -27,30 +27,40 @@ class NgoDonation extends StatelessWidget {
         padding: EdgeInsets.all(16),
         child: Column(
           children: [
-            buildTextField(title: 'To', controller: controllerTo),
+            buildTextField(
+                title: 'To',
+                controller: controllerTo,
+                hint: "Enter email of NGO"),
             const SizedBox(
               height: 16,
             ),
-            buildTextField(title: 'NGO Name', controller: controllerName),
+            buildTextField(
+                title: 'NGO Name',
+                controller: controllerName,
+                hint: "Who is your target NGO?"),
             const SizedBox(
               height: 16,
             ),
-            buildTextField(title: 'Subject', controller: controllerSubject),
             const SizedBox(
               height: 16,
             ),
-            buildTextField(title: 'Veg/Non-Veg', controller: controllerVeg),
+            buildTextField(
+                title: 'Veg/Non-Veg',
+                controller: controllerVeg,
+                hint: "Your food is veg or non-veg?"),
             const SizedBox(
               height: 16,
             ),
             buildTextField(
               title: "Item's name",
               controller: controllerMessage,
+              hint: "Enter the name of your food",
               maxLines: 8,
             ),
             const SizedBox(height: 32),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.indigo[800],
                 minimumSize: Size.fromHeight(50),
                 textStyle: TextStyle(fontSize: 20),
               ),
@@ -58,7 +68,6 @@ class NgoDonation extends StatelessWidget {
               onPressed: () => lanuchEmail(
                 toEmail: controllerTo.text,
                 name: controllerName.text,
-                subject: controllerSubject.text,
                 message: controllerMessage.text,
                 veg: controllerVeg.text,
               ),
@@ -72,6 +81,7 @@ class NgoDonation extends StatelessWidget {
   Widget buildTextField({
     required String title,
     required TextEditingController controller,
+    required String hint,
     int maxLines = 1,
   }) {
     return Column(
@@ -79,14 +89,23 @@ class NgoDonation extends StatelessWidget {
       children: [
         Text(
           title,
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Colors.lightBlue[900]),
         ),
         const SizedBox(height: 8),
-        TextField(
-          controller: controller,
-          maxLines: maxLines,
-          decoration: InputDecoration(
-            border: OutlineInputBorder(),
+        Container(
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(20))),
+          child: TextField(
+            controller: controller,
+            maxLines: maxLines,
+            decoration: InputDecoration(
+              fillColor: Colors.white,
+              hintText: hint,
+              border: OutlineInputBorder(),
+            ),
           ),
         ),
       ],
@@ -96,11 +115,10 @@ class NgoDonation extends StatelessWidget {
   Future lanuchEmail(
       {required String toEmail,
       required String name,
-      required String subject,
       required String message,
       required String veg}) async {
     final url =
-        'mailto:$toEmail?subject=${Uri.encodeFull(subject)}&body=${Uri.encodeFull("\nDonation for " + veg + "\nName of food is " + message)}';
+        'mailto:$toEmail?subject="Enquiry regarding the Food donation"&body=${Uri.encodeFull("\nDonation for " + veg + "\nName of food is " + message)}';
 
     // ignore: deprecated_member_use
     if (await canLaunch(url)) {

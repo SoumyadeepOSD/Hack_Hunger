@@ -32,15 +32,17 @@ class MyButton extends StatelessWidget {
         height: 100,
         width: 300,
         decoration: BoxDecoration(
-          color: Colors.blue[400],
+          border: Border.all(color: Colors.blue),
+          color: Colors.blue[100],
           borderRadius: BorderRadius.all(
-            Radius.circular(10),
+            Radius.circular(24),
           ),
         ),
         child: Center(
           child: Text(
             text,
             style: TextStyle(
+              fontFamily: 'lauren',
               color: Colors.black,
               fontSize: 25,
             ),
