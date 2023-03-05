@@ -53,6 +53,7 @@ dependencies:
   firebase_auth: ^4.2.9
   google_sign_in: ^6.0.2
   font_awesome_flutter: ^10.4.0
+  flutter_phone_direct_caller: ^2.1.1
 
 dev_dependencies:
   flutter_test:

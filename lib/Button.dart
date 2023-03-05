@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:zero_hunger/FinalPage.dart';
+import 'package:zero_hunger/IntermediatePage.dart';
 import 'package:zero_hunger/NgoDonation.dart';
 import 'package:zero_hunger/SelfDonation.dart';
 import 'package:zero_hunger/TabPage/ChatScreen.dart';
@@ -23,7 +24,7 @@ class MyButton extends StatelessWidget {
               )
             : Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => NgoDonation()),
+                MaterialPageRoute(builder: (context) => InterPage()),
               );
       },
       child: Container(
