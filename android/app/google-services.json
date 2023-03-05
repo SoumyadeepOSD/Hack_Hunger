@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "45431022434",
+    "project_id": "hack-hunger",
+    "storage_bucket": "hack-hunger.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45431022434:android:04dd6c7735037d0d7cc23b",
+        "android_client_info": {
+          "package_name": "com.example.zero_hunger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "45431022434-8lesa4ko4idba37sleg72iob1k5ojttp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCO-MGELcR-b3hSgkhF7sGTN13LF3niA2Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "45431022434-8lesa4ko4idba37sleg72iob1k5ojttp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

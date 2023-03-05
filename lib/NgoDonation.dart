@@ -14,6 +14,7 @@ class NgoDonation extends StatelessWidget {
   final controllerSubject = TextEditingController();
   final controllerMessage = TextEditingController();
   final controllerVeg = TextEditingController();
+  final controllerName = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +28,10 @@ class NgoDonation extends StatelessWidget {
         child: Column(
           children: [
             buildTextField(title: 'To', controller: controllerTo),
+            const SizedBox(
+              height: 16,
+            ),
+            buildTextField(title: 'NGO Name', controller: controllerName),
             const SizedBox(
               height: 16,
             ),
@@ -52,6 +57,7 @@ class NgoDonation extends StatelessWidget {
               child: Text('SEND'),
               onPressed: () => lanuchEmail(
                 toEmail: controllerTo.text,
+                name: controllerName.text,
                 subject: controllerSubject.text,
                 message: controllerMessage.text,
                 veg: controllerVeg.text,
@@ -89,11 +95,12 @@ class NgoDonation extends StatelessWidget {
 
   Future lanuchEmail(
       {required String toEmail,
+      required String name,
       required String subject,
       required String message,
       required String veg}) async {
     final url =
-        'mailto:$toEmail?subject=${Uri.encodeFull(subject)}&body=${Uri.encodeFull("\nDonation for " + veg + "\nName of food is " + message)}';
+        'mailto:$toEmail?subject=${Uri.encodeFull(subject)}&body=${Uri.encodeFull("To the" + name + "\nDonation for " + veg + "\nName of food is " + message)}';
 
     // ignore: deprecated_member_use
     if (await canLaunch(url)) {

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
+import 'package:zero_hunger/AuthPage.dart';
 import 'package:zero_hunger/TabPage/More.dart';
 import 'package:zero_hunger/TabPage/Profile.dart';
 import 'TabPage/ChatScreen.dart';
@@ -74,7 +75,7 @@ class _HomePageState extends State<HomePage> {
                     //action when this menu is pressed
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Profile()),
+                      MaterialPageRoute(builder: (context) => AuthStack()),
                     );
                   },
                 ),
