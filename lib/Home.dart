@@ -6,6 +6,7 @@ import 'package:zero_hunger/AuthPage.dart';
 import 'package:zero_hunger/PhoneNumber.dart';
 import 'package:zero_hunger/TabPage/More.dart';
 import 'package:zero_hunger/TabPage/Profile.dart';
+import 'package:zero_hunger/ViewData.dart';
 import 'TabPage/ChatScreen.dart';
 import 'Button.dart';
 
@@ -86,7 +87,7 @@ class _HomePageState extends State<HomePage> {
                 child: ListTile(
                   dense: true,
                   title: Text(
-                    "AI Assistant",
+                    "Ask your query",
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w600,
@@ -118,7 +119,7 @@ class _HomePageState extends State<HomePage> {
                     //action when this menu is pressed
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => PhoneNumber()),
+                      MaterialPageRoute(builder: (context) => ViewData()),
                     );
                   },
                 ),

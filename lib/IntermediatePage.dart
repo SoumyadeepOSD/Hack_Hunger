@@ -47,11 +47,11 @@ class InterPage extends StatelessWidget {
                       borderRadius: BorderRadius.all(Radius.circular(24))),
                   child: TextButton(
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => PhoneNumber(),
-                          ));
+                      // Navigator.push(
+                      //     context,
+                      //     MaterialPageRoute(
+                      //       builder: (context) => PhoneNumber(),
+                      //     ));
                     },
                     child: Text(
                       'Call to NGO',

@@ -27,3 +27,37 @@ class TextWidget extends StatelessWidget {
     );
   }
 }
+
+Widget buildTextField({
+  required String title,
+  required TextEditingController controller,
+  required String hint,
+  int maxLines = 1,
+}) {
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Text(
+        title,
+        style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Colors.lightBlue[900]),
+      ),
+      const SizedBox(height: 8),
+      Container(
+        decoration:
+            BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(20))),
+        child: TextField(
+          controller: controller,
+          maxLines: maxLines,
+          decoration: InputDecoration(
+            fillColor: Colors.white,
+            hintText: hint,
+            border: OutlineInputBorder(),
+          ),
+        ),
+      ),
+    ],
+  );
+}

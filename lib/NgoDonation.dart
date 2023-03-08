@@ -4,7 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:velocity_x/velocity_x.dart';
-import 'package:zero_hunger/FinalPage.dart';
+import 'package:zero_hunger/SelfDonation.dart';
 import 'package:zero_hunger/main.dart';
 
 class NgoDonation extends StatelessWidget {
