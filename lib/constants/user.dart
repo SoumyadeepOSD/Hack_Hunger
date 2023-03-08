@@ -1,19 +1,19 @@
-// import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
-// class User {
-//   final String name;
-//   final String number;
+class Donator {
+  final String name;
+  final String number;
 
-//   User(this.name, this.number, {required id});
+  Donator(this.name, this.number);
 
-//   static fromJson(Map<String, dynamic> data) {}
-// }
+  static fromJson(Map<String, dynamic> data) {}
+}
 
-// final allUsers = [
-//   User('John', '8910902078'),
-//   User('Johny', '8910968778'),
-//   User('Johna', '8910989778'),
-//   User('Johnm', '8910977778'),
-//   User('Johny', '8910970898'),
-//   User('Jahn', '8910960698'),
-// ];
+final allUsers = [
+  Donator('John', '8910902078'),
+  Donator('Johny', '8910968778'),
+  Donator('Johna', '8910989778'),
+  Donator('Johnm', '8910977778'),
+  Donator('Johny', '8910970898'),
+  Donator('Jahn', '8910960698'),
+];
