@@ -38,7 +38,23 @@ class _ViewDataState extends State<ViewData> {
   }
 }
 
-Widget buildUser(User user) => ListTile(
-      title: Text(user.name),
-      subtitle: Text(user.email),
+Widget buildUser(User user) => Container(
+      margin: EdgeInsets.fromLTRB(5, 5, 5, 5),
+      decoration: BoxDecoration(
+        color: Colors.blue[200],
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.5),
+            spreadRadius: 5,
+            blurRadius: 7,
+            offset: const Offset(0, 3),
+          ),
+        ],
+      ),
+      child: ListTile(
+        title: Text(user.name),
+        subtitle: Text(user.email),
+      ),
     );
