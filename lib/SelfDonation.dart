@@ -1,23 +1,35 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:email_validator/email_validator.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:zero_hunger/Constants/user.dart';
+import 'package:zero_hunger/ImagePage.dart';
 import 'package:zero_hunger/SelfDonation.dart';
 import 'package:zero_hunger/main.dart';
+import 'package:file_picker/file_picker.dart';
+import 'package:firebase_storage_platform_interface/firebase_storage_platform_interface.dart';
 
 import 'widgets/TextWidget.dart';
 
-class SelfDonation extends StatelessWidget {
+class SelfDonation extends StatefulWidget {
   SelfDonation({super.key});
 
+  @override
+  State<SelfDonation> createState() => _SelfDonationState();
+}
+
+class _SelfDonationState extends State<SelfDonation> {
   final controllerName = TextEditingController();
+
   final controllerEmail = TextEditingController();
+
   final controllerPhone = TextEditingController();
 
   @override
@@ -63,12 +75,16 @@ class SelfDonation extends StatelessWidget {
               ),
               child: Text('SEND'),
               onPressed: () {
-                final user = User(
-                  name: controllerName.text,
-                  email: controllerEmail.text,
-                  phone: controllerPhone.text,
+                // final user = User(
+                //   name: controllerName.text,
+                //   email: controllerEmail.text,
+                //   phone: controllerPhone.text,
+                // );
+                // createUser(user);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ImagePage()),
                 );
-                createUser(user);
               },
             ),
           ],

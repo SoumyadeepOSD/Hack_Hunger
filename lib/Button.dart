@@ -1,34 +1,43 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:zero_hunger/Home.dart';
 import 'package:zero_hunger/SelfDonation.dart';
 import 'package:zero_hunger/IntermediatePage.dart';
 import 'package:zero_hunger/NgoDonation.dart';
-import 'package:zero_hunger/TabPage/ChatScreen.dart';
 
 import 'TabPage/More.dart';
 
 class MyButton extends StatelessWidget {
   String text;
-  MyButton({required this.text});
+
+  double height;
+  MyButton({required this.text, required this.height});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        text == "Self-Donation"
-            ? Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => SelfDonation()),
-              )
-            : Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => InterPage()),
-              );
+        if (text == "Self-Donation") {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => SelfDonation()),
+          );
+        } else if (text == "Go to Home") {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => HomePage()),
+          );
+        } else {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => InterPage()),
+          );
+        }
       },
       child: Container(
         margin: EdgeInsets.only(bottom: 10, top: 15),
-        height: 100,
+        height: height,
         width: 300,
         decoration: BoxDecoration(
           border: Border.all(color: Colors.blue),

@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
-import 'package:zero_hunger/AuthPage.dart';
 import 'package:zero_hunger/PhoneNumber.dart';
 import 'package:zero_hunger/TabPage/More.dart';
 import 'package:zero_hunger/TabPage/Profile.dart';
 import 'package:zero_hunger/ViewData.dart';
+import 'package:zero_hunger/WorldSituation.dart';
 import 'TabPage/ChatScreen.dart';
 import 'Button.dart';
 
@@ -14,6 +14,8 @@ class HomePage extends StatefulWidget {
   @override
   State<HomePage> createState() => _HomePageState();
 }
+
+final navigatorKey = GlobalKey<NavigatorState>();
 
 class _HomePageState extends State<HomePage> {
   @override
@@ -66,7 +68,7 @@ class _HomePageState extends State<HomePage> {
                 child: ListTile(
                   dense: true,
                   title: Text(
-                    "My Profile",
+                    "World Situation",
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w600,
@@ -77,7 +79,7 @@ class _HomePageState extends State<HomePage> {
                     //action when this menu is pressed
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => AuthStack()),
+                      MaterialPageRoute(builder: (context) => WorldSituation()),
                     );
                   },
                 ),
@@ -87,7 +89,7 @@ class _HomePageState extends State<HomePage> {
                 child: ListTile(
                   dense: true,
                   title: Text(
-                    "Ask your query",
+                    "Health Care",
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w600,
@@ -98,7 +100,7 @@ class _HomePageState extends State<HomePage> {
                     //action when this menu is pressed
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => ChatScreen()),
+                      MaterialPageRoute(builder: (context) => HealthCare()),
                     );
                   },
                 ),
@@ -108,7 +110,7 @@ class _HomePageState extends State<HomePage> {
                 child: ListTile(
                   dense: true,
                   title: Text(
-                    "More",
+                    "Past Donation",
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w600,
@@ -192,8 +194,14 @@ class _HomePageState extends State<HomePage> {
                   fontSize: 25,
                 ),
               ),
-              MyButton(text: 'Self-Donation'),
-              MyButton(text: 'Donate to NGO'),
+              MyButton(
+                text: 'Self-Donation',
+                height: 100,
+              ),
+              MyButton(
+                text: 'Donate to NGO',
+                height: 100,
+              ),
             ],
           ),
         ),
