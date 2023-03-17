@@ -75,12 +75,12 @@ class _SelfDonationState extends State<SelfDonation> {
               ),
               child: Text('SEND'),
               onPressed: () {
-                // final user = User(
-                //   name: controllerName.text,
-                //   email: controllerEmail.text,
-                //   phone: controllerPhone.text,
-                // );
-                // createUser(user);
+                final user = User(
+                    name: controllerName.text,
+                    email: controllerEmail.text,
+                    phone: controllerPhone.text,
+                    reward: "0");
+                createUser(user);
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => ImagePage()),
@@ -111,24 +111,27 @@ class User {
   final String name;
   final String email;
   final String phone;
+  final String reward;
 
-  User({
-    this.id = '',
-    required this.name,
-    required this.email,
-    required this.phone,
-  });
+  User(
+      {this.id = '',
+      required this.name,
+      required this.email,
+      required this.phone,
+      required this.reward});
 
   Map<String, dynamic> toJson() => {
         'id': id,
         'name': name,
         'email': email,
         'phone': phone,
+        'reward': reward
       };
 
   static User fromJson(Map<String, dynamic> json) => User(
       id: json['id'],
       name: json['name'],
       email: json['email'],
-      phone: json['phone']);
+      phone: json['phone'],
+      reward: json['reward']);
 }

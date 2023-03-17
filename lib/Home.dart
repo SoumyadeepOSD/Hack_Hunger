@@ -205,7 +205,7 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                       child: Image.asset(
-                        "assets/images/image1.png",
+                        "assets/images/slide1.jpeg",
                         fit: BoxFit.fitHeight,
                         height: 50,
                       ),
@@ -226,7 +226,7 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                       child: Image.asset(
-                        "assets/images/image2.png",
+                        "assets/images/slide2.jpeg",
                         fit: BoxFit.fitHeight,
                         height: 50,
                       ),
@@ -247,7 +247,7 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                       child: Image.asset(
-                        "assets/images/image3.jpg",
+                        "assets/images/slide3.jpeg",
                         fit: BoxFit.fitWidth,
                         height: 50,
                       ),
@@ -268,7 +268,7 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                       child: Image.asset(
-                        "assets/images/image4.jpg",
+                        "assets/images/slide4.jpeg",
                         fit: BoxFit.fitHeight,
                         height: 50,
                       ),
@@ -289,7 +289,7 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                       child: Image.asset(
-                        "assets/images/image5.jpg",
+                        "assets/images/slide5.jpeg",
                         fit: BoxFit.fitHeight,
                         height: 50,
                       ),

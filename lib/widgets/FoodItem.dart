@@ -10,6 +10,7 @@ class FoodItem extends StatelessWidget {
   String protine;
   String water;
   String sugar;
+  String url;
 
   FoodItem({
     super.key,
@@ -20,16 +21,23 @@ class FoodItem extends StatelessWidget {
     required this.protine,
     required this.water,
     required this.sugar,
+    required this.url,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(bottom: 10),
       width: 400,
       height: 70,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
+          CircleAvatar(
+            backgroundImage: NetworkImage(url),
+            backgroundColor: Colors.amber,
+            radius: 15,
+          ),
           Text(
             name,
             style: TextStyle(

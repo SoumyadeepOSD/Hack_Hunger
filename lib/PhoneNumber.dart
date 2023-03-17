@@ -31,7 +31,8 @@ class PhoneNumber extends StatelessWidget {
       title: Text('Anirban'),
       subtitle: Text(number),
       leading: CircleAvatar(
-        backgroundImage: NetworkImage('https://unsplash.com/human'),
+        backgroundImage: NetworkImage(
+            'https://webstockreview.net/images/contact-icon-png-6.png'),
       ),
       trailing: TextButton(
         style: TextButton.styleFrom(
@@ -62,7 +63,7 @@ class PhoneNumber extends StatelessWidget {
           leading: CircleAvatar(
             radius: 30,
             backgroundImage: NetworkImage(
-              'https://unsplash.com/profile',
+              'https://webstockreview.net/images/contact-icon-png-6.png',
             ),
           )),
     );
