@@ -25,155 +25,173 @@ class _HomePageState extends State<HomePage> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.purple[900],
-          title: Center(
-            child: Text(
-              'Hack Hunger',
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.w700,
-                fontSize: 20,
-                letterSpacing: 2,
-              ),
-            ),
-          ),
-        ),
-        drawer: Drawer(
-          backgroundColor: Colors.purple[900],
-          child: SafeArea(
-              child: Column(
-            children: [
-              SizedBox(
-                height: 40,
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(0, 20, 0, 10),
-                child: ListTile(
-                  dense: true,
-                  title: Text(
-                    "Home Page",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600,
+            backgroundColor: Colors.purple[900],
+            title: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.account_circle_rounded,
+                      ),
                     ),
-                  ),
-                  leading: Icon(
-                    Icons.home,
-                    color: Colors.white60,
-                  ),
-                  onTap: () {
-                    //action when this menu is pressed
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => HomePage()),
-                    );
-                  },
+                    TextButton(
+                        child: Text(
+                          "Location",
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w800,
+                              fontFamily: "Poppins"),
+                        ),
+                        onPressed: () {},
+                        style: TextButton.styleFrom(
+                            foregroundColor: Colors.white)),
+                  ],
                 ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(0, 20, 0, 10),
-                child: ListTile(
-                  dense: true,
-                  title: Text(
-                    "World Situation",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  leading: Icon(
-                    Icons.balcony_outlined,
-                    color: Colors.white60,
-                  ),
-                  onTap: () {
-                    //action when this menu is pressed
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => WorldSituation()),
-                    );
-                  },
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(0, 20, 0, 10),
-                child: ListTile(
-                  dense: true,
-                  title: Text(
-                    "Health Care",
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  leading: Icon(
-                    Icons.add_box,
-                    color: Colors.white60,
-                  ),
-                  onTap: () {
-                    //action when this menu is pressed
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => HealthCare()),
-                    );
-                  },
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(0, 20, 0, 10),
-                child: ListTile(
-                  dense: true,
-                  title: Text(
-                    "Past Donation",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  leading: Icon(
-                    Icons.monitor_heart,
-                    color: Colors.white60,
-                  ),
-                  onTap: () {
-                    //action when this menu is pressed
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => ViewData()),
-                    );
-                  },
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(0, 20, 0, 10),
-                child: ListTile(
-                  dense: true,
-                  title: Text(
-                    "Help & Support",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  leading: Icon(
-                    Icons.contact_support_sharp,
-                    color: Colors.white60,
-                  ),
-                  onTap: () {
-                    //action when this menu is pressed
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => HelpSupport()),
-                    );
-                  },
-                ),
-              ),
-            ],
-          )),
-        ),
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.notifications),
+                )
+              ],
+            )),
+        // drawer: Drawer(
+        //   backgroundColor: Colors.purple[900],
+        //   child: SafeArea(
+        //       child: Column(
+        //     children: [
+        //       SizedBox(
+        //         height: 40,
+        //       ),
+        //       Padding(
+        //         padding: EdgeInsets.fromLTRB(0, 20, 0, 10),
+        //         child: ListTile(
+        //           dense: true,
+        //           title: Text(
+        //             "Home Page",
+        //             style: TextStyle(
+        //               color: Colors.white,
+        //               fontSize: 20,
+        //               fontWeight: FontWeight.w600,
+        //             ),
+        //           ),
+        //           leading: Icon(
+        //             Icons.home,
+        //             color: Colors.white60,
+        //           ),
+        //           onTap: () {
+        //             //action when this menu is pressed
+        //             Navigator.push(
+        //               context,
+        //               MaterialPageRoute(builder: (context) => HomePage()),
+        //             );
+        //           },
+        //         ),
+        //       ),
+        //       Padding(
+        //         padding: EdgeInsets.fromLTRB(0, 20, 0, 10),
+        //         child: ListTile(
+        //           dense: true,
+        //           title: Text(
+        //             "World Situation",
+        //             style: TextStyle(
+        //               color: Colors.white,
+        //               fontSize: 20,
+        //               fontWeight: FontWeight.w600,
+        //             ),
+        //           ),
+        //           leading: Icon(
+        //             Icons.balcony_outlined,
+        //             color: Colors.white60,
+        //           ),
+        //           onTap: () {
+        //             //action when this menu is pressed
+        //             Navigator.push(
+        //               context,
+        //               MaterialPageRoute(builder: (context) => WorldSituation()),
+        //             );
+        //           },
+        //         ),
+        //       ),
+        //       Padding(
+        //         padding: EdgeInsets.fromLTRB(0, 20, 0, 10),
+        //         child: ListTile(
+        //           dense: true,
+        //           title: Text(
+        //             "Health Care",
+        //             style: TextStyle(
+        //               fontSize: 20,
+        //               color: Colors.white,
+        //               fontWeight: FontWeight.w600,
+        //             ),
+        //           ),
+        //           leading: Icon(
+        //             Icons.add_box,
+        //             color: Colors.white60,
+        //           ),
+        //           onTap: () {
+        //             //action when this menu is pressed
+        //             Navigator.push(
+        //               context,
+        //               MaterialPageRoute(builder: (context) => HealthCare()),
+        //             );
+        //           },
+        //         ),
+        //       ),
+        //       Padding(
+        //         padding: EdgeInsets.fromLTRB(0, 20, 0, 10),
+        //         child: ListTile(
+        //           dense: true,
+        //           title: Text(
+        //             "Past Donation",
+        //             style: TextStyle(
+        //               color: Colors.white,
+        //               fontSize: 20,
+        //               fontWeight: FontWeight.w600,
+        //             ),
+        //           ),
+        //           leading: Icon(
+        //             Icons.monitor_heart,
+        //             color: Colors.white60,
+        //           ),
+        //           onTap: () {
+        //             //action when this menu is pressed
+        //             Navigator.push(
+        //               context,
+        //               MaterialPageRoute(builder: (context) => ViewData()),
+        //             );
+        //           },
+        //         ),
+        //       ),
+        //       Padding(
+        //         padding: EdgeInsets.fromLTRB(0, 20, 0, 10),
+        //         child: ListTile(
+        //           dense: true,
+        //           title: Text(
+        //             "Help & Support",
+        //             style: TextStyle(
+        //               color: Colors.white,
+        //               fontSize: 20,
+        //               fontWeight: FontWeight.w600,
+        //             ),
+        //           ),
+        //           leading: Icon(
+        //             Icons.contact_support_sharp,
+        //             color: Colors.white60,
+        //           ),
+        //           onTap: () {
+        //             //action when this menu is pressed
+        //             Navigator.push(
+        //               context,
+        //               MaterialPageRoute(builder: (context) => HelpSupport()),
+        //             );
+        //           },
+        //         ),
+        //       ),
+        //     ],
+        //   )),
+        // ),
         body: Container(
           height: 600,
           child: Column(
