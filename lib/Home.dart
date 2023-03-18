@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.blueAccent[400],
+          backgroundColor: Colors.purple[900],
           title: Center(
             child: Text(
               'Hack Hunger',
@@ -176,23 +176,37 @@ class _HomePageState extends State<HomePage> {
         ),
         body: Container(
           height: 600,
-          decoration: BoxDecoration(
-            color: Colors.blue[200],
-          ),
           child: Column(
             children: [
-              SizedBox(
-                height: 30,
-              ),
               Center(
                 child: ImageSlideshow(
-                  width: 400,
+                  width: 450,
                   height: 150,
                   children: [
                     Container(
-                      margin: EdgeInsets.all(12),
+                      margin:
+                          EdgeInsets.only(top: 5, bottom: 5, left: 5, right: 5),
                       decoration: BoxDecoration(
-                        color: Colors.indigo[900],
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 5,
+                            blurRadius: 7,
+                            offset: const Offset(0, 3),
+                          ),
+                        ],
+                      ),
+                      child: Image.asset(
+                        "assets/images/slide1.jpeg",
+                        fit: BoxFit.fill,
+                        height: 50,
+                      ),
+                    ),
+                    Container(
+                      margin:
+                          EdgeInsets.only(top: 5, bottom: 5, left: 5, right: 5),
+                      decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(),
                         boxShadow: [
@@ -206,14 +220,14 @@ class _HomePageState extends State<HomePage> {
                       ),
                       child: Image.asset(
                         "assets/images/slide1.jpeg",
-                        fit: BoxFit.fitHeight,
+                        fit: BoxFit.fill,
                         height: 50,
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.all(12),
+                      margin:
+                          EdgeInsets.only(top: 5, bottom: 5, left: 5, right: 5),
                       decoration: BoxDecoration(
-                        color: Colors.indigo[900],
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(),
                         boxShadow: [
@@ -226,15 +240,15 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                       child: Image.asset(
-                        "assets/images/slide2.jpeg",
-                        fit: BoxFit.fitHeight,
+                        "assets/images/slide1.jpeg",
+                        fit: BoxFit.fill,
                         height: 50,
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.all(12),
+                      margin:
+                          EdgeInsets.only(top: 5, bottom: 5, left: 5, right: 5),
                       decoration: BoxDecoration(
-                        color: Colors.indigo[900],
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(),
                         boxShadow: [
@@ -247,15 +261,15 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                       child: Image.asset(
-                        "assets/images/slide3.jpeg",
-                        fit: BoxFit.fitWidth,
+                        "assets/images/slide1.jpeg",
+                        fit: BoxFit.fill,
                         height: 50,
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.all(12),
+                      margin:
+                          EdgeInsets.only(top: 5, bottom: 5, left: 5, right: 5),
                       decoration: BoxDecoration(
-                        color: Colors.indigo[900],
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(),
                         boxShadow: [
@@ -268,15 +282,15 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                       child: Image.asset(
-                        "assets/images/slide4.jpeg",
-                        fit: BoxFit.fitHeight,
+                        "assets/images/slide1.jpeg",
+                        fit: BoxFit.fill,
                         height: 50,
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.all(12),
+                      margin:
+                          EdgeInsets.only(top: 5, bottom: 5, left: 5, right: 5),
                       decoration: BoxDecoration(
-                        color: Colors.indigo[900],
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(),
                         boxShadow: [
@@ -289,8 +303,8 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                       child: Image.asset(
-                        "assets/images/slide5.jpeg",
-                        fit: BoxFit.fitHeight,
+                        "assets/images/slide1.jpeg",
+                        fit: BoxFit.fill,
                         height: 50,
                       ),
                     ),
