@@ -11,7 +11,11 @@ class InterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Donate to NGO'),
+        backgroundColor: Colors.deepPurple[800],
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [Text('Donate to NGO'), Icon(Icons.help)],
+        ),
       ),
       body: MaterialApp(
         debugShowCheckedModeBanner: false,

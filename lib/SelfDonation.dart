@@ -79,7 +79,11 @@ class _SelfDonationState extends State<SelfDonation> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Self Donation"),
+        backgroundColor: Colors.deepPurple[800],
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [Text("Self Donation"), Icon(Icons.help)],
+        ),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -144,7 +148,8 @@ class _SelfDonationState extends State<SelfDonation> {
                     name: controllerName.text,
                     email: controllerEmail.text,
                     phone: controllerPhone.text,
-                    reward: "0");
+                    reward: "0",
+                    address: address);
                 createUser(user);
                 Navigator.push(
                   context,
@@ -177,20 +182,23 @@ class User {
   final String email;
   final String phone;
   final String reward;
+  final String address;
 
   User(
       {this.id = '',
       required this.name,
       required this.email,
       required this.phone,
-      required this.reward});
+      required this.reward,
+      required this.address});
 
   Map<String, dynamic> toJson() => {
         'id': id,
         'name': name,
         'email': email,
         'phone': phone,
-        'reward': reward
+        'reward': reward,
+        'address': address
       };
 
   static User fromJson(Map<String, dynamic> json) => User(
@@ -198,5 +206,6 @@ class User {
       name: json['name'],
       email: json['email'],
       phone: json['phone'],
-      reward: json['reward']);
+      reward: json['reward'],
+      address: json['address']);
 }

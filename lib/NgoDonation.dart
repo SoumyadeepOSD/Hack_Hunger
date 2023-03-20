@@ -20,7 +20,11 @@ class NgoDonation extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("NGO Donation"),
+        backgroundColor: Colors.deepPurple[800],
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [Text("NGO Donation"), Icon(Icons.help)],
+        ),
         centerTitle: true,
       ),
       body: SingleChildScrollView(

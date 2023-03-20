@@ -13,9 +13,11 @@ class PhoneNumber extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Phone Calls'),
-        centerTitle: true,
-      ),
+          backgroundColor: Colors.deepPurple[800],
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [Text('Phone calls'), Icon(Icons.help)],
+          )),
       body: ListView.builder(
           itemCount: users.length,
           itemBuilder: (context, index) {

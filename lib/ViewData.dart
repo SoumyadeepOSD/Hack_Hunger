@@ -17,7 +17,11 @@ class _ViewDataState extends State<ViewData> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Past Donations'),
+        backgroundColor: Colors.deepPurple[800],
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [Text('Past Donations'), Icon(Icons.help)],
+        ),
       ),
       body: StreamBuilder(
         stream: readUsers(),
@@ -42,6 +46,7 @@ class _ViewDataState extends State<ViewData> {
 
 Widget buildUser(User user) {
   var val = user.reward;
+  String address = user.address;
 
   return Container(
     margin: EdgeInsets.fromLTRB(5, 5, 5, 5),
@@ -70,7 +75,7 @@ Widget buildUser(User user) {
               "Reward: ${user.reward}",
               style: TextStyle(color: val == '0' ? Colors.red : Colors.green),
             ),
-            Text(user.email)
+            Text(address.split(',')[0].toString())
           ],
         )),
   );
