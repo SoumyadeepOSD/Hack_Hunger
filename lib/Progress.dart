@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:velocity_x/velocity_x.dart';
-import 'package:zero_hunger/Button.dart';
+import 'package:zero_hunger/widgets/Button.dart';
 import 'package:zero_hunger/Home.dart';
 
 class Progress extends StatelessWidget {

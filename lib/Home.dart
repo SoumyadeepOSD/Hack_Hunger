@@ -1,15 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
-import 'package:zero_hunger/HelpSupport.dart';
-import 'package:zero_hunger/PhoneNumber.dart';
-import 'package:zero_hunger/TabPage/More.dart';
-import 'package:zero_hunger/TabPage/Profile.dart';
-import 'package:zero_hunger/ViewData.dart';
-import 'package:zero_hunger/WorldSituation.dart';
-import 'TabPage/ChatScreen.dart';
-import 'Button.dart';
+import 'widgets/ImageSlider.dart';
+import 'widgets/CardContainer.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -25,7 +16,7 @@ class _HomePageState extends State<HomePage> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-            backgroundColor: Colors.purple[900],
+            backgroundColor: Colors.deepPurple[800],
             title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -50,13 +41,39 @@ class _HomePageState extends State<HomePage> {
                             foregroundColor: Colors.white)),
                   ],
                 ),
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(Icons.notifications),
-                )
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: Icon(Icons.notifications),
+                    ),
+                    IconButton(
+                      onPressed: () {},
+                      icon: Icon(Icons.help),
+                    )
+                  ],
+                ),
               ],
             )),
-        // drawer: Drawer(
+        body: Container(
+          height: 600,
+          child: Column(
+            children: [
+              Center(child: ImageSlider()),
+              CardContainer__First(),
+              CardContainer__Second(),
+              Empty__CardContainer()
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+// drawer: Drawer(
         //   backgroundColor: Colors.purple[900],
         //   child: SafeArea(
         //       child: Column(
@@ -192,178 +209,3 @@ class _HomePageState extends State<HomePage> {
         //     ],
         //   )),
         // ),
-        body: Container(
-          height: 600,
-          child: Column(
-            children: [
-              Center(
-                child: ImageSlideshow(
-                  width: 450,
-                  height: 150,
-                  children: [
-                    Container(
-                      margin:
-                          EdgeInsets.only(top: 5, bottom: 5, left: 5, right: 5),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.5),
-                            spreadRadius: 5,
-                            blurRadius: 7,
-                            offset: const Offset(0, 3),
-                          ),
-                        ],
-                      ),
-                      child: Image.asset(
-                        "assets/images/slide1.jpeg",
-                        fit: BoxFit.fill,
-                        height: 50,
-                      ),
-                    ),
-                    Container(
-                      margin:
-                          EdgeInsets.only(top: 5, bottom: 5, left: 5, right: 5),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.5),
-                            spreadRadius: 5,
-                            blurRadius: 7,
-                            offset: const Offset(0, 3),
-                          ),
-                        ],
-                      ),
-                      child: Image.asset(
-                        "assets/images/slide1.jpeg",
-                        fit: BoxFit.fill,
-                        height: 50,
-                      ),
-                    ),
-                    Container(
-                      margin:
-                          EdgeInsets.only(top: 5, bottom: 5, left: 5, right: 5),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.5),
-                            spreadRadius: 5,
-                            blurRadius: 7,
-                            offset: const Offset(0, 3),
-                          ),
-                        ],
-                      ),
-                      child: Image.asset(
-                        "assets/images/slide1.jpeg",
-                        fit: BoxFit.fill,
-                        height: 50,
-                      ),
-                    ),
-                    Container(
-                      margin:
-                          EdgeInsets.only(top: 5, bottom: 5, left: 5, right: 5),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.5),
-                            spreadRadius: 5,
-                            blurRadius: 7,
-                            offset: const Offset(0, 3),
-                          ),
-                        ],
-                      ),
-                      child: Image.asset(
-                        "assets/images/slide1.jpeg",
-                        fit: BoxFit.fill,
-                        height: 50,
-                      ),
-                    ),
-                    Container(
-                      margin:
-                          EdgeInsets.only(top: 5, bottom: 5, left: 5, right: 5),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.5),
-                            spreadRadius: 5,
-                            blurRadius: 7,
-                            offset: const Offset(0, 3),
-                          ),
-                        ],
-                      ),
-                      child: Image.asset(
-                        "assets/images/slide1.jpeg",
-                        fit: BoxFit.fill,
-                        height: 50,
-                      ),
-                    ),
-                    Container(
-                      margin:
-                          EdgeInsets.only(top: 5, bottom: 5, left: 5, right: 5),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.5),
-                            spreadRadius: 5,
-                            blurRadius: 7,
-                            offset: const Offset(0, 3),
-                          ),
-                        ],
-                      ),
-                      child: Image.asset(
-                        "assets/images/slide1.jpeg",
-                        fit: BoxFit.fill,
-                        height: 50,
-                      ),
-                    ),
-                  ],
-                  autoPlayInterval: 3000,
-                  isLoop: true,
-                ),
-              ),
-              Container(padding: EdgeInsets.only(bottom: 50)),
-              Text(
-                "Our small donation can improve",
-                style: TextStyle(
-                  overflow: null,
-                  fontFamily: 'lorem Lipsum',
-                  fontWeight: FontWeight.bold,
-                  color: Colors.blueAccent[700],
-                  fontSize: 25,
-                ),
-              ),
-              Text(
-                "other's lives",
-                style: TextStyle(
-                  overflow: null,
-                  fontFamily: 'lorem Lipsum',
-                  fontWeight: FontWeight.bold,
-                  color: Colors.blueAccent[700],
-                  fontSize: 25,
-                ),
-              ),
-              MyButton(
-                text: 'Self-Donation',
-                height: 100,
-              ),
-              MyButton(
-                text: 'Donate to NGO',
-                height: 100,
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}

@@ -6,7 +6,7 @@ import 'package:zero_hunger/SelfDonation.dart';
 import 'package:zero_hunger/IntermediatePage.dart';
 import 'package:zero_hunger/NgoDonation.dart';
 
-import 'TabPage/More.dart';
+import '../TabPage/More.dart';
 
 class MyButton extends StatelessWidget {
   String text;
