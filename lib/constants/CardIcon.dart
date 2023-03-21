@@ -8,7 +8,7 @@ import 'package:zero_hunger/IntermediatePage.dart';
 import 'package:zero_hunger/NgoDonation.dart';
 import 'package:zero_hunger/Searching_Options/SearchPage.dart';
 import 'package:zero_hunger/SelfDonation.dart';
-import 'package:zero_hunger/SupportVendors.dart';
+import 'package:zero_hunger/VendorPage.dart';
 import 'package:zero_hunger/ViewData.dart';
 import 'package:zero_hunger/WorldSituation.dart';
 
@@ -92,7 +92,7 @@ class CardIcon extends StatelessWidget {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      SupportVendors()),
+                                                      VendorPage()),
                                             ));
             },
             icon: flag == 1
