@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
-import 'package:zero_hunger/Text.dart';
 import 'widgets/ImageSlider.dart';
 import 'widgets/CardContainer.dart';
 
@@ -20,34 +16,6 @@ class _HomePageState extends State<HomePage> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.amber,
-          title: Center(
-            child: Text(
-              'Hack Hunger',
-              style: TextStyle(
-                fontWeight: FontWeight.w700,
-                fontSize: 20,
-                color: Colors.black,
-                letterSpacing: 2,
-              ),
-            ),
-          ),
-        ),
-        drawer: Drawer(
-          backgroundColor: Colors.amber[800],
-          child: SafeArea(
-              child: Column(
-            children: [
-              rohan(),
-              Padding(
-                padding: EdgeInsets.fromLTRB(0, 20, 0, 10),
-                child: ListTile(
-                  dense: true,
-                  title: Text(
-                    "Home Page",
-                    style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w600,
             backgroundColor: Colors.deepPurple[800],
             title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -99,14 +67,8 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
-        ),
-        ),
-        ];
-        ),
-        ),
-        ),
-        ),
-        );
+      ),
+    );
   }
 }
 
