@@ -3,12 +3,15 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:zero_hunger/Text.dart';
-import 'Button.dart';
+import 'widgets/ImageSlider.dart';
+import 'widgets/CardContainer.dart';
 
 class HomePage extends StatefulWidget {
   @override
   State<HomePage> createState() => _HomePageState();
 }
+
+final navigatorKey = GlobalKey<NavigatorState>();
 
 class _HomePageState extends State<HomePage> {
   @override
@@ -45,139 +48,202 @@ class _HomePageState extends State<HomePage> {
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w600,
+            backgroundColor: Colors.deepPurple[800],
+            title: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.account_circle_rounded,
+                      ),
                     ),
-                  ),
-                  leading: Icon(Icons.home),
-                  onTap: () {
-                    //action when this menu is pressed
-                  },
+                    TextButton(
+                        child: Text(
+                          "Location",
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w800,
+                              fontFamily: "Poppins"),
+                        ),
+                        onPressed: () {},
+                        style: TextButton.styleFrom(
+                            foregroundColor: Colors.white)),
+                  ],
                 ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(0, 20, 0, 10),
-                child: ListTile(
-                  dense: true,
-                  title: Text(
-                    "My Profile",
-                    style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w600,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: Icon(Icons.notifications),
                     ),
-                  ),
-                  leading: Icon(Icons.person),
-                  onTap: () {
-                    //action when this menu is pressed
-                  },
+                    IconButton(
+                      onPressed: () {},
+                      icon: Icon(Icons.help),
+                    )
+                  ],
                 ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(0, 20, 0, 10),
-                child: ListTile(
-                  dense: true,
-                  title: Text(
-                    "My Orders",
-                    style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  leading: Icon(Icons.add_box),
-                  onTap: () {
-                    //action when this menu is pressed
-                  },
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(0, 20, 0, 10),
-                child: ListTile(
-                  dense: true,
-                  title: Text(
-                    "My Favourites",
-                    style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  leading: Icon(Icons.monitor_heart),
-                  onTap: () {
-                    //action when this menu is pressed
-                  },
-                ),
-              ),
-            ],
-          )),
-        ),
+              ],
+            )),
         body: Container(
-          margin: EdgeInsets.only(top: 10, left: 5, right: 5),
-          height: 1000,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            color: Colors.grey[200],
-          ),
+          height: 600,
           child: Column(
             children: [
-              Center(
-                child: ImageSlideshow(
-                  width: 400,
-                  height: 150,
-                  children: [
-                    Image.asset(
-                      "assets/image1.png",
-                      fit: BoxFit.fitHeight,
-                      height: 50,
-                    ),
-                    Image.asset(
-                      "assets/image2.png",
-                      fit: BoxFit.fitHeight,
-                      height: 50,
-                    ),
-                    Image.asset(
-                      "assets/image3.jpg",
-                      fit: BoxFit.fitHeight,
-                      height: 50,
-                    ),
-                    Image.asset(
-                      "assets/image4.jpg",
-                      fit: BoxFit.fitHeight,
-                      height: 50,
-                    ),
-                    Image.asset(
-                      "assets/image5.jpg",
-                      fit: BoxFit.fitHeight,
-                      height: 50,
-                    ),
-                  ],
-                  autoPlayInterval: 3000,
-                  isLoop: true,
-                ),
-              ),
-              Container(padding: EdgeInsets.only(bottom: 50)),
-              Text(
-                "Our small donation can improve",
-                style: TextStyle(
-                  overflow: null,
-                  fontFamily: 'lorem Lipsum',
-                  fontWeight: FontWeight.bold,
-                  color: Colors.blueAccent[700],
-                  fontSize: 25,
-                ),
-              ),
-              Text(
-                "other's lives",
-                style: TextStyle(
-                  overflow: null,
-                  fontFamily: 'lorem Lipsum',
-                  fontWeight: FontWeight.bold,
-                  color: Colors.blueAccent[700],
-                  fontSize: 25,
-                ),
-              ),
-              MyButton(text: 'Self-Donation'),
-              MyButton(text: 'Donate to NGO'),
+              Center(child: ImageSlider()),
+              CardContainer__First(),
+              CardContainer__Second(),
+              Empty__CardContainer()
             ],
           ),
         ),
-      ),
-    );
+        ),
+        ),
+        ];
+        ),
+        ),
+        ),
+        ),
+        );
   }
 }
+
+
+// drawer: Drawer(
+        //   backgroundColor: Colors.purple[900],
+        //   child: SafeArea(
+        //       child: Column(
+        //     children: [
+        //       SizedBox(
+        //         height: 40,
+        //       ),
+        //       Padding(
+        //         padding: EdgeInsets.fromLTRB(0, 20, 0, 10),
+        //         child: ListTile(
+        //           dense: true,
+        //           title: Text(
+        //             "Home Page",
+        //             style: TextStyle(
+        //               color: Colors.white,
+        //               fontSize: 20,
+        //               fontWeight: FontWeight.w600,
+        //             ),
+        //           ),
+        //           leading: Icon(
+        //             Icons.home,
+        //             color: Colors.white60,
+        //           ),
+        //           onTap: () {
+        //             //action when this menu is pressed
+        //             Navigator.push(
+        //               context,
+        //               MaterialPageRoute(builder: (context) => HomePage()),
+        //             );
+        //           },
+        //         ),
+        //       ),
+        //       Padding(
+        //         padding: EdgeInsets.fromLTRB(0, 20, 0, 10),
+        //         child: ListTile(
+        //           dense: true,
+        //           title: Text(
+        //             "World Situation",
+        //             style: TextStyle(
+        //               color: Colors.white,
+        //               fontSize: 20,
+        //               fontWeight: FontWeight.w600,
+        //             ),
+        //           ),
+        //           leading: Icon(
+        //             Icons.balcony_outlined,
+        //             color: Colors.white60,
+        //           ),
+        //           onTap: () {
+        //             //action when this menu is pressed
+        //             Navigator.push(
+        //               context,
+        //               MaterialPageRoute(builder: (context) => WorldSituation()),
+        //             );
+        //           },
+        //         ),
+        //       ),
+        //       Padding(
+        //         padding: EdgeInsets.fromLTRB(0, 20, 0, 10),
+        //         child: ListTile(
+        //           dense: true,
+        //           title: Text(
+        //             "Health Care",
+        //             style: TextStyle(
+        //               fontSize: 20,
+        //               color: Colors.white,
+        //               fontWeight: FontWeight.w600,
+        //             ),
+        //           ),
+        //           leading: Icon(
+        //             Icons.add_box,
+        //             color: Colors.white60,
+        //           ),
+        //           onTap: () {
+        //             //action when this menu is pressed
+        //             Navigator.push(
+        //               context,
+        //               MaterialPageRoute(builder: (context) => HealthCare()),
+        //             );
+        //           },
+        //         ),
+        //       ),
+        //       Padding(
+        //         padding: EdgeInsets.fromLTRB(0, 20, 0, 10),
+        //         child: ListTile(
+        //           dense: true,
+        //           title: Text(
+        //             "Past Donation",
+        //             style: TextStyle(
+        //               color: Colors.white,
+        //               fontSize: 20,
+        //               fontWeight: FontWeight.w600,
+        //             ),
+        //           ),
+        //           leading: Icon(
+        //             Icons.monitor_heart,
+        //             color: Colors.white60,
+        //           ),
+        //           onTap: () {
+        //             //action when this menu is pressed
+        //             Navigator.push(
+        //               context,
+        //               MaterialPageRoute(builder: (context) => ViewData()),
+        //             );
+        //           },
+        //         ),
+        //       ),
+        //       Padding(
+        //         padding: EdgeInsets.fromLTRB(0, 20, 0, 10),
+        //         child: ListTile(
+        //           dense: true,
+        //           title: Text(
+        //             "Help & Support",
+        //             style: TextStyle(
+        //               color: Colors.white,
+        //               fontSize: 20,
+        //               fontWeight: FontWeight.w600,
+        //             ),
+        //           ),
+        //           leading: Icon(
+        //             Icons.contact_support_sharp,
+        //             color: Colors.white60,
+        //           ),
+        //           onTap: () {
+        //             //action when this menu is pressed
+        //             Navigator.push(
+        //               context,
+        //               MaterialPageRoute(builder: (context) => HelpSupport()),
+        //             );
+        //           },
+        //         ),
+        //       ),
+        //     ],
+        //   )),
+        // ),
