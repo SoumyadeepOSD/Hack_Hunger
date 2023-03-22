@@ -55,6 +55,13 @@ class _VendorPageState extends State<VendorPage> {
                     width: 50,
                     height: 50,
                   ),
+                  trailing: Text(
+                    'Vendor: ${vendor.VendorMan}',
+                    style: TextStyle(
+                        color: Colors.blue,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w700),
+                  ),
                   title: Text(
                     vendor.name,
                   ),

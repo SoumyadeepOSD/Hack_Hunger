@@ -12,8 +12,11 @@ class MyCard extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(top: 10, left: 10),
       decoration: BoxDecoration(
-          gradient: LinearGradient(
-              colors: [Colors.deepOrange, Colors.green, Colors.white]),
+          gradient: LinearGradient(colors: [
+            Colors.deepOrange.shade200,
+            Colors.green.shade200,
+            Colors.white
+          ]),
           borderRadius:
               BorderRadius.only(bottomLeft: Radius.elliptical(10, 11))),
       child: Padding(

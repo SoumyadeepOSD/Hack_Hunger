@@ -51,18 +51,33 @@ class _EnableWorkersState extends State<EnableWorkers> {
             itemBuilder: ((context, index) {
               final job = jobs[index];
 
-              return ListTile(
-                leading: Image.network(
-                  job.urlImage,
-                  fit: BoxFit.cover,
-                  width: 50,
-                  height: 50,
+              return Container(
+                decoration: BoxDecoration(
+                    border:
+                        Border.all(width: 0.1, color: Colors.grey.shade500)),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ListTile(
+                    contentPadding: EdgeInsets.all(5),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                    tileColor: Colors.grey[300],
+                    horizontalTitleGap: 5,
+                    leading: Image.network(
+                      job.urlImage,
+                      fit: BoxFit.cover,
+                      width: 50,
+                      height: 50,
+                    ),
+                    title: Text(
+                      job.title,
+                    ),
+                    onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => JobPage(job: job))),
+                  ),
                 ),
-                title: Text(
-                  job.title,
-                ),
-                onTap: () => Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => JobPage(job: job))),
               );
             }),
           )),
