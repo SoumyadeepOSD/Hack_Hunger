@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "sdb-xmbc",
+  "private_key_id": "959d3f43816b8e13c79ab8531e299bbfe2770f2e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDH5mwM1NAtXeMp\nMkzG2G6zWcUsSN1satQ7BlZHzJu6veufwlLDIxf+A6sTRoTfOhprcGyUYmF6M/0J\n5xw/glVjZm/AEJd13DH+p2Pobf6tvbi8dm7jEXjFYGM29XHcKo90beCHm6NtGaT1\ndHRsz3Z/4Wk5fOfMC33XkozD/SpAp2GYllrBdecgIU2KhXVwitQ2o23M+YfChAcg\n+mePXz+IU/H2c6IS1j/RdcJFxFOjBqXrpxPDpzCDFQullnl3Ba7Wzk2tZbWe235k\nau0wRI+l7dzq60MPwRNAH3D52AY1oWAvUhirmQjWbXrsmaiphZ/HaB1ZnN7aRu4X\n8MDmRLf3AgMBAAECggEAMlFBdG9jIXBHHFkRc2IKZ3HazF1hAwfW+S6MrFEICBcD\nRvkCnSTpxqJEvzraelglS1MGuckT0U9hy8rVVPUpKjagPX/PqDavjPK0ls6NM02U\nwTesjNKajFBJWQ2qRemep4d645edKPqyB6jzH2qPYPwr4PEcZcOkvw0gCrtgldo5\n7NN2wHAFyp46tjml1prFD3tfOqtuyPnRdH+OvNFERSmk7Fo+a7rcW2xLk20X8os0\nxf9/jVf6Z6Hh6Ppd8m3/5bBw2eaLTLgc57xJ/pLq7nYxw6W7hYkFefY6DxP1bSk4\n7DFWUzWGEAfG5nmhfwcNEORFOHblpKOtsL3JhgeU3QKBgQDzA1ySPVgHQpoxRQ4X\nXcwuDg3UdfwWQJ5/2hInxvzK3yTiej08MKXmX1Qhd4XJlgiU8AqKlj5qH48qPDIx\nS2HTDOz5EmVslJvHqjxZCEngwSIbjRm/Xa6ULgM9TZHNZ1dBCZa87Z7rIxJhJ0Rv\nn8QzTpvPLZI7OjTv7itkhwMpowKBgQDSlTw18CrYJoa1qAat52hlHeiiiKl7RxZ9\nfNlg+ohJzstKhHU8VVTS+1vMjnP+l5XU8FdCv9dBMTcpnQhl/Au74zN4D1A/rabU\n96HIuh4mhvwnYx42MzlM0ISv7KUAL1buS/EnHE7nkkneVstnaZrAFBAIq0aD8Z1d\n2ePdsKwFnQKBgHR5EP5afn2EU4j30wgqAbm1LLW/EuLLd+xJZdhAzFqj1vbhpcXa\nfzlKSXV85te2nEheQH8qAaI1nBWfImN0AN/52v6J7ai8FWn+UsxNZ7Ncfe98knGh\nAhKtdwoDyrULKcvXP7MvpLKIbb+45Vkm1w/MRmtnKSZQAJ1aptuYxlBHAoGAIXf2\nidwR8yisYFLEPP96aBfI0YxG44D44hjls7Qd1R040i8bMuuc/6tTe79oUB5ngeBw\n/frfi0z3J3X9z7evZb1GgN5uMrC2w0JYRD7Qa+8oRFpMgvDBOqQpcox57P2ZI2aO\nfVjScZuegefpjBYMslp98eLG4lGUYUYwIRvjO0ECgYEAuSWrkexJ/UkChJpzwSKP\nE/uPG1baddwXsfovf4yLNFQ29pI5z0/3K/JjEXhxsk7PHvpH836Ww5tv1Bph7SCQ\nrv/5DxG+flEp7+n9xeM/pwKjgFac71EsIYZZeEiwfFeTWpEikAtco5gvjTRzVGxc\nU0I2vX176Ay7JDZBfNvkeyk=\n-----END PRIVATE KEY-----\n",
+  "client_email": "flutter-dialogflow@sdb-xmbc.iam.gserviceaccount.com",
+  "client_id": "107335330438681910063",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/flutter-dialogflow%40sdb-xmbc.iam.gserviceaccount.com"
+}

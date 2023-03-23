@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zero_hunger/DialogFlow.dart';
 import 'widgets/ImageSlider.dart';
 import 'widgets/CardContainer.dart';
 
@@ -49,7 +50,12 @@ class _HomePageState extends State<HomePage> {
                       icon: Icon(Icons.notifications),
                     ),
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => DialogFlow()),
+                        );
+                      },
                       icon: Icon(Icons.help),
                     )
                   ],
@@ -99,10 +105,10 @@ class _HomePageState extends State<HomePage> {
         //           ),
         //           onTap: () {
         //             //action when this menu is pressed
-        //             Navigator.push(
-        //               context,
-        //               MaterialPageRoute(builder: (context) => HomePage()),
-        //             );
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(builder: (context) => HomePage()),
+                    // );
         //           },
         //         ),
         //       ),
