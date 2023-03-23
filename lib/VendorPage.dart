@@ -15,6 +15,7 @@ class _VendorPageState extends State<VendorPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[100],
       appBar: AppBar(
         backgroundColor: Colors.deepPurple[600],
         title: Row(
@@ -48,27 +49,49 @@ class _VendorPageState extends State<VendorPage> {
               itemBuilder: ((context, index) {
                 final vendor = vendors[index];
 
-                return ListTile(
-                  leading: Image.network(
-                    vendor.urlImage,
-                    fit: BoxFit.cover,
-                    width: 50,
-                    height: 50,
+                return Material(
+                  elevation: 20,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ListTile(
+                      contentPadding: EdgeInsets.all(10),
+                      tileColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(22),
+                      ),
+                      leading: Image.network(
+                        vendor.urlImage,
+                        fit: BoxFit.cover,
+                        width: 50,
+                        height: 50,
+                      ),
+                      trailing: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Vendor: ${vendor.VendorMan}',
+                            style: TextStyle(
+                                color: Colors.blue,
+                                fontSize: 15,
+                                fontWeight: FontWeight.w700),
+                          ),
+                          Text(vendor.food),
+                        ],
+                      ),
+                      title: Text(
+                        vendor.name,
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w700),
+                      ),
+                      subtitle: Text(vendor.price + "₹"),
+                      onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => VendorBuy(vendor: vendor))),
+                    ),
                   ),
-                  trailing: Text(
-                    'Vendor: ${vendor.VendorMan}',
-                    style: TextStyle(
-                        color: Colors.blue,
-                        fontSize: 15,
-                        fontWeight: FontWeight.w700),
-                  ),
-                  title: Text(
-                    vendor.name,
-                  ),
-                  onTap: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => VendorBuy(vendor: vendor))),
                 );
               }),
             ),

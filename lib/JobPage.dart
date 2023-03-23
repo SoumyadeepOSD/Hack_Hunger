@@ -20,74 +20,104 @@ class JobPage extends StatelessWidget {
           children: [
             Image.network(
               job.urlImage,
-              width: double.infinity,
-              height: 300,
+              width: 100,
+              height: 100,
               fit: BoxFit.fitHeight,
             ),
-            Text(
-              job.title,
-              style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.w800,
-                  fontSize: 25),
+            SizedBox(
+              height: 20,
             ),
-            Row(
-              children: [
-                Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10),
-                      child: Text('Location: ${job.location}',
+            Container(
+              padding: EdgeInsets.only(top: 10),
+              decoration: BoxDecoration(
+                  border: Border.all(color: Colors.blueAccent),
+                  borderRadius: BorderRadius.circular(20)),
+              child: Column(
+                children: [
+                  Text(
+                    job.title,
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w800,
+                        fontSize: 25),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: Text('Location: ${job.location}',
+                            style: TextStyle(
+                                color: Colors.black87,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 20)),
+                      ),
+                      Text(
+                          'Salary: ${job.salary}k to ${(int.parse(job.salary) + 10).toString()}k',
                           style: TextStyle(
                               color: Colors.black87,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w300,
                               fontSize: 20)),
-                    ),
-                    Text('Salary: ${job.salary}k',
-                        style: TextStyle(
-                            color: Colors.black87,
+                    ],
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                    padding: EdgeInsets.only(left: 10, right: 10),
+                    child: Column(
+                      children: [
+                        Text(
+                          'Description',
+                          style: TextStyle(
+                            fontSize: 25,
                             fontWeight: FontWeight.w500,
-                            fontSize: 20)),
-                  ],
-                ),
-              ],
-            ),
-            Text(
-              'Description',
-              style: TextStyle(
-                fontSize: 25,
-                fontWeight: FontWeight.w500,
-                color: Colors.indigoAccent,
+                            color: Colors.indigoAccent,
+                          ),
+                        ),
+                        Text(
+                          job.time,
+                          style: TextStyle(
+                            color: Colors.black87,
+                            fontSize: 15,
+                            fontFamily: 'poppins',
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: (70 * 2),
+                  ),
+                  Text(
+                    job.time,
+                    style: TextStyle(
+                        color: Colors.grey.shade500,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w400),
+                  ),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.deepPurple,
+                        padding: EdgeInsets.only(
+                          left: 50,
+                          right: 50,
+                        )),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => JobForm()),
+                      );
+                    },
+                    child: Text(
+                      'Apply Now',
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                    ),
+                  )
+                ],
               ),
             ),
-            Text(
-              job.desc,
-              style: TextStyle(
-                color: Colors.black87,
-                fontSize: 15,
-                fontFamily: 'poppins',
-              ),
-            ),
-            SizedBox(
-              height: 50,
-            ),
-            ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.deepPurple,
-                    padding: EdgeInsets.only(
-                      left: 50,
-                      right: 50,
-                    )),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => JobForm()),
-                  );
-                },
-                child: Text(
-                  'Apply Now',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-                ))
           ],
         ),
       ),

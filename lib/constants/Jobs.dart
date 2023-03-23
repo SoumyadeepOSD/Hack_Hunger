@@ -4,13 +4,15 @@ class Job {
   final String salary;
   final String location;
   final String desc;
+  final String time;
 
   const Job(
       {required this.title,
       required this.urlImage,
       required this.salary,
       required this.location,
-      required this.desc});
+      required this.desc,
+      required this.time});
 }
 
 const allJobs = [
@@ -21,7 +23,8 @@ const allJobs = [
       salary: '10',
       location: 'Remote',
       desc:
-          'hvh vhg sdftfstr fgfdtd vxgfdgt fdhtry ghhty tytrh  gtgfer fhh fthytr  ftytut rtytryb tr6 ghh tytry ytyb t7tnbgchgbntfh t trtrt t tt t t yttt g'),
+          'hvh vhg sdftfstr fgfdtd vxgfdgt fdhtry ghhty tytrh  gtgfer fhh fthytr  ftytut rtytryb tr6 ghh tytry ytyb t7tnbgchgbntfh t trtrt t tt t t yttt g',
+      time: '4-8hrs'),
   Job(
       title: 'Plumbing service near karunamoyee',
       urlImage:
@@ -29,7 +32,8 @@ const allJobs = [
       salary: '10',
       location: 'Remote',
       desc:
-          'hvh vhg sdftfstr fgfdtd vxgfdgt fdhtry ghhty tytrh  gtgfer fhh fthytr  ftytut rtytryb tr6 ghh tytry ytyb t7tnbgchgbntfh t trtrt t tt t t yttt g'),
+          'hvh vhg sdftfstr fgfdtd vxgfdgt fdhtry ghhty tytrh  gtgfer fhh fthytr  ftytut rtytryb tr6 ghh tytry ytyb t7tnbgchgbntfh t trtrt t tt t t yttt g',
+      time: '4-8hrs'),
   Job(
       title: 'Electritian',
       urlImage:
@@ -37,7 +41,8 @@ const allJobs = [
       salary: '10',
       location: 'Remote',
       desc:
-          'hvh vhg sdftfstr fgfdtd vxgfdgt fdhtry ghhty tytrh  gtgfer fhh fthytr  ftytut rtytryb tr6 ghh tytry ytyb t7tnbgchgbntfh t trtrt t tt t t yttt g'),
+          'hvh vhg sdftfstr fgfdtd vxgfdgt fdhtry ghhty tytrh  gtgfer fhh fthytr  ftytut rtytryb tr6 ghh tytry ytyb t7tnbgchgbntfh t trtrt t tt t t yttt g',
+      time: '4-8hrs'),
   Job(
       title: 'Labour',
       urlImage:
@@ -45,7 +50,8 @@ const allJobs = [
       salary: '10',
       location: 'Remote',
       desc:
-          'hvh vhg sdftfstr fgfdtd vxgfdgt fdhtry ghhty tytrh  gtgfer fhh fthytr  ftytut rtytryb tr6 ghh tytry ytyb t7tnbgchgbntfh t trtrt t tt t t yttt g'),
+          'hvh vhg sdftfstr fgfdtd vxgfdgt fdhtry ghhty tytrh  gtgfer fhh fthytr  ftytut rtytryb tr6 ghh tytry ytyb t7tnbgchgbntfh t trtrt t tt t t yttt g',
+      time: '4-8hrs'),
   Job(
       title: 'Garbage cleaner',
       urlImage:
@@ -53,7 +59,8 @@ const allJobs = [
       salary: '10',
       location: 'Remote',
       desc:
-          'hvh vhg sdftfstr fgfdtd vxgfdgt fdhtry ghhty tytrh  gtgfer fhh fthytr  ftytut rtytryb tr6 ghh tytry ytyb t7tnbgchgbntfh t trtrt t tt t t yttt g'),
+          'hvh vhg sdftfstr fgfdtd vxgfdgt fdhtry ghhty tytrh  gtgfer fhh fthytr  ftytut rtytryb tr6 ghh tytry ytyb t7tnbgchgbntfh t trtrt t tt t t yttt g',
+      time: '4-8hrs'),
   Job(
       title: 'Salesman',
       urlImage:
@@ -61,7 +68,8 @@ const allJobs = [
       salary: '10',
       location: 'Remote',
       desc:
-          'hvh vhg sdftfstr fgfdtd vxgfdgt fdhtry ghhty tytrh  gtgfer fhh fthytr  ftytut rtytryb tr6 ghh tytry ytyb t7tnbgchgbntfh t trtrt t tt t t yttt g'),
+          'hvh vhg sdftfstr fgfdtd vxgfdgt fdhtry ghhty tytrh  gtgfer fhh fthytr  ftytut rtytryb tr6 ghh tytry ytyb t7tnbgchgbntfh t trtrt t tt t t yttt g',
+      time: '4-8hrs'),
   Job(
       title: 'Barber',
       urlImage:
@@ -69,5 +77,6 @@ const allJobs = [
       salary: '10',
       location: 'Remote',
       desc:
-          'hvh vhg sdftfstr fgfdtd vxgfdgt fdhtry ghhty tytrh  gtgfer fhh fthytr  ftytut rtytryb tr6 ghh tytry ytyb t7tnbgchgbntfh t trtrt t tt t t yttt g'),
+          'hvh vhg sdftfstr fgfdtd vxgfdgt fdhtry ghhty tytrh  gtgfer fhh fthytr  ftytut rtytryb tr6 ghh tytry ytyb t7tnbgchgbntfh t trtrt t tt t t yttt g',
+      time: '4-8hrs'),
 ];
