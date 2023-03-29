@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:zero_hunger/HarvestPaymentPage.dart';
 
 import 'Searching_Options/constants.dart';
 
@@ -92,7 +93,10 @@ class Harvest extends StatelessWidget {
                     style: TextStyle(fontSize: 20),
                   ),
                   onPressed: () {
-                    print('Paid');
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => HarvestPayment()),
+                    );
                   },
                 ),
               ),

@@ -12,6 +12,7 @@ class JobPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.deepPurple,
         title: Text('Your job'),
       ),
       body: Padding(
@@ -76,7 +77,7 @@ class JobPage extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          job.time,
+                          'Timing: ' + job.time,
                           style: TextStyle(
                             color: Colors.black87,
                             fontSize: 15,
@@ -87,14 +88,17 @@ class JobPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: (70 * 2),
+                    height: (50 * 2),
                   ),
-                  Text(
-                    job.time,
-                    style: TextStyle(
-                        color: Colors.grey.shade500,
-                        fontSize: 15,
-                        fontWeight: FontWeight.w400),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      job.desc,
+                      style: TextStyle(
+                          color: Colors.grey.shade500,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w400),
+                    ),
                   ),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(

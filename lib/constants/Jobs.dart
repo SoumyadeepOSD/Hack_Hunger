@@ -23,7 +23,7 @@ const allJobs = [
       salary: '10',
       location: 'Remote',
       desc:
-          'hvh vhg sdftfstr fgfdtd vxgfdgt fdhtry ghhty tytrh  gtgfer fhh fthytr  ftytut rtytryb tr6 ghh tytry ytyb t7tnbgchgbntfh t trtrt t tt t t yttt g',
+          "Computer technitian responsibities include-A Computer Technician is a professional who is tasked with maintaining computer systems, troubleshooting errors, and repairing the organization's hardware. These professionals use their knowledge in networking and software applications to provide technical support for both employees and customers onsite or remotely.",
       time: '4-8hrs'),
   Job(
       title: 'Plumbing service near karunamoyee',
@@ -32,7 +32,7 @@ const allJobs = [
       salary: '10',
       location: 'Remote',
       desc:
-          'hvh vhg sdftfstr fgfdtd vxgfdgt fdhtry ghhty tytrh  gtgfer fhh fthytr  ftytut rtytryb tr6 ghh tytry ytyb t7tnbgchgbntfh t trtrt t tt t t yttt g',
+          "Plumber cleaner responsibities include-Plumbers fit and maintain water systems in buildings. This includes toilets, baths, showers, sinks, washing machines and dishwashers. They can also install central heating systems but need additional qualifications to work with gas boilers.",
       time: '4-8hrs'),
   Job(
       title: 'Electritian',
@@ -41,7 +41,7 @@ const allJobs = [
       salary: '10',
       location: 'Remote',
       desc:
-          'hvh vhg sdftfstr fgfdtd vxgfdgt fdhtry ghhty tytrh  gtgfer fhh fthytr  ftytut rtytryb tr6 ghh tytry ytyb t7tnbgchgbntfh t trtrt t tt t t yttt g',
+          "Electritian responsibities include-Executing plans of electrical wiring for well functioning lighting, intercom and other electrical systems. Installing electrical apparatus, fixtures and equipment for alarm and other systems. Installing safety and distribution components.",
       time: '4-8hrs'),
   Job(
       title: 'Labour',
@@ -49,7 +49,7 @@ const allJobs = [
       salary: '10',
       location: 'Remote',
       desc:
-          'hvh vhg sdftfstr fgfdtd vxgfdgt fdhtry ghhty tytrh  gtgfer fhh fthytr  ftytut rtytryb tr6 ghh tytry ytyb t7tnbgchgbntfh t trtrt t tt t t yttt g',
+          "Labour responsibilities include-Depending on the industry, during the workday, a laborer may operate machinery, remove debris, build structures, perform landscaping work, use specialized equipment, lay asphalt or concrete, prepare surfaces for building, move or stack items, load and unload transport vessels, and do many other physical tasks.",
       time: '4-8hrs'),
   Job(
       title: 'Garbage cleaner',
@@ -58,7 +58,7 @@ const allJobs = [
       salary: '10',
       location: 'Remote',
       desc:
-          'hvh vhg sdftfstr fgfdtd vxgfdgt fdhtry ghhty tytrh  gtgfer fhh fthytr  ftytut rtytryb tr6 ghh tytry ytyb t7tnbgchgbntfh t trtrt t tt t t yttt g',
+          "Garbage cleaner responsibities include-Garbage collectors usually work in pairs, picking up and removing waste, recyclable goods,or yard debris from residential neighbourhoods, commercial business centres, and public parks.",
       time: '4-8hrs'),
   Job(
       title: 'Salesman',
@@ -67,7 +67,7 @@ const allJobs = [
       salary: '10',
       location: 'Remote',
       desc:
-          'hvh vhg sdftfstr fgfdtd vxgfdgt fdhtry ghhty tytrh  gtgfer fhh fthytr  ftytut rtytryb tr6 ghh tytry ytyb t7tnbgchgbntfh t trtrt t tt t t yttt g',
+          "Salesman responsibilities include-Selling products or services to customers, and representing the brand. This can include asking questions to pinpoint the best offerings, giving demos or presentations, and maintaining customer relationships. Reaching out to potential leads through a variety of channels, such as email, phone, text, and social media.",
       time: '4-8hrs'),
   Job(
       title: 'Barber',
@@ -76,6 +76,6 @@ const allJobs = [
       salary: '10',
       location: 'Remote',
       desc:
-          'hvh vhg sdftfstr fgfdtd vxgfdgt fdhtry ghhty tytrh  gtgfer fhh fthytr  ftytut rtytryb tr6 ghh tytry ytyb t7tnbgchgbntfh t trtrt t tt t t yttt g',
+          "Barber's job is to cut the hair of the people who will be coming towards him. And definately he has the duty in the society to take care of his customer as his own value. Giving value to the every individials in the society we're currently living in is the most important thing, and having a chance to serve a specfic part of the country will definately help them in financial as well as in social manner",
       time: '4-8hrs'),
 ];

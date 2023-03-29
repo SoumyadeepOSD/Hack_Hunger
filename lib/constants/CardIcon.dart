@@ -7,6 +7,7 @@ import 'package:zero_hunger/GovtScheme.dart';
 import 'package:zero_hunger/IntermediatePage.dart';
 import 'package:zero_hunger/NgoDonation.dart';
 import 'package:zero_hunger/Searching_Options/SearchPage.dart';
+import 'package:zero_hunger/SelfDonateOptions.dart';
 import 'package:zero_hunger/SelfDonation.dart';
 import 'package:zero_hunger/VendorPage.dart';
 import 'package:zero_hunger/ViewData.dart';
@@ -49,7 +50,8 @@ class CardIcon extends StatelessWidget {
               flag == 1
                   ? (Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => SelfDonation()),
+                      MaterialPageRoute(
+                          builder: (context) => SelfDonationOptions()),
                     ))
                   : flag == 2
                       ? (Navigator.push(
