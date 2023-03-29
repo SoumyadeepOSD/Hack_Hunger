@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:zero_hunger/Constants/Vendors.dart';
 import 'package:zero_hunger/VensorBuy.dart';
 
+import 'DialogFlow.dart';
+
 class VendorPage extends StatefulWidget {
   const VendorPage({super.key});
 
@@ -22,7 +24,15 @@ class _VendorPageState extends State<VendorPage> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text('Support Vendors'),
-            Icon(Icons.help),
+            InkWell(
+              child: Icon(Icons.help),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => DialogFlow()),
+                );
+              },
+            ),
           ],
         ),
       ),

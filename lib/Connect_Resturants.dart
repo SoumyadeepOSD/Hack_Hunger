@@ -2,6 +2,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter/material.dart';
 
+import 'DialogFlow.dart';
+
 class Connect_Resturant extends StatelessWidget {
   Connect_Resturant({super.key});
 
@@ -19,7 +21,15 @@ class Connect_Resturant extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text('Collaboration'),
-            Icon(Icons.help),
+            InkWell(
+              child: Icon(Icons.help),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => DialogFlow()),
+                );
+              },
+            ),
           ],
         ),
       ),

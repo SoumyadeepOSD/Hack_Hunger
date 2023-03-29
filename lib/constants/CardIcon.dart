@@ -62,7 +62,7 @@ class CardIcon extends StatelessWidget {
                           ? (Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => ViewData()),
+                                  builder: (context) => PastDonation()),
                             ))
                           : flag == 4
                               ? (Navigator.push(

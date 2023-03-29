@@ -6,6 +6,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import 'Constants/user.dart';
+import 'DialogFlow.dart';
 
 class PhoneNumber extends StatelessWidget {
   List<Donator> users = allUsers;
@@ -16,7 +17,18 @@ class PhoneNumber extends StatelessWidget {
           backgroundColor: Colors.deepPurple[800],
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [Text('Phone calls'), Icon(Icons.help)],
+            children: [
+              Text('Phone calls'),
+              InkWell(
+                child: Icon(Icons.help),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => DialogFlow()),
+                  );
+                },
+              ),
+            ],
           )),
       body: ListView.builder(
           itemCount: users.length,

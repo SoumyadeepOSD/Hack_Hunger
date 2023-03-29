@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:zero_hunger/widgets/GovtCard.dart';
 import 'package:pie_chart/pie_chart.dart';
+import 'DialogFlow.dart';
 import 'widgets/CustomCard.dart';
 
 class WorldSituation extends StatelessWidget {
@@ -46,7 +47,15 @@ class WorldSituation extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text('Current Situation'),
-              Icon(Icons.help),
+              InkWell(
+                child: Icon(Icons.help),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => DialogFlow()),
+                  );
+                },
+              ),
             ],
           )),
       body: SingleChildScrollView(

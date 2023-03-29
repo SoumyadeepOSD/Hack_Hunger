@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
+import 'DialogFlow.dart';
 import 'widgets/CustomCard.dart';
 import 'widgets/GovtCard.dart';
 
@@ -18,7 +19,15 @@ class GovtScheme extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text('Govt. Schemes'),
-            Icon(Icons.help),
+            InkWell(
+              child: Icon(Icons.help),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => DialogFlow()),
+                );
+              },
+            ),
           ],
         ),
       ),

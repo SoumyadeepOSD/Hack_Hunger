@@ -7,6 +7,8 @@ import 'package:velocity_x/velocity_x.dart';
 import 'package:zero_hunger/SelfDonation.dart';
 import 'package:zero_hunger/main.dart';
 
+import 'DialogFlow.dart';
+
 class NgoDonation extends StatelessWidget {
   NgoDonation({super.key});
 
@@ -23,7 +25,18 @@ class NgoDonation extends StatelessWidget {
         backgroundColor: Colors.deepPurple[800],
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [Text("NGO Donation"), Icon(Icons.help)],
+          children: [
+            Text("NGO Donation"),
+            InkWell(
+              child: Icon(Icons.help),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => DialogFlow()),
+                );
+              },
+            ),
+          ],
         ),
         centerTitle: true,
       ),

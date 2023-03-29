@@ -4,6 +4,8 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:zero_hunger/NgoDonation.dart';
 import 'package:zero_hunger/PhoneNumber.dart';
 
+import 'DialogFlow.dart';
+
 class InterPage extends StatelessWidget {
   const InterPage({super.key});
 
@@ -14,7 +16,18 @@ class InterPage extends StatelessWidget {
         backgroundColor: Colors.deepPurple[800],
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [Text('Donate to NGO'), Icon(Icons.help)],
+          children: [
+            Text('Donate to NGO'),
+            InkWell(
+              child: Icon(Icons.help),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => DialogFlow()),
+                );
+              },
+            ),
+          ],
         ),
       ),
       body: MaterialApp(

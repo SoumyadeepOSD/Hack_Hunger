@@ -18,6 +18,7 @@ import 'package:zero_hunger/main.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:firebase_storage_platform_interface/firebase_storage_platform_interface.dart';
 import 'package:geocoding/geocoding.dart';
+import 'DialogFlow.dart';
 import 'widgets/TextWidget.dart';
 
 class SelfDonation extends StatefulWidget {
@@ -82,7 +83,18 @@ class _SelfDonationState extends State<SelfDonation> {
         backgroundColor: Colors.deepPurple[800],
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [Text("Self Donation"), Icon(Icons.help)],
+          children: [
+            Text("Self Donation"),
+            InkWell(
+              child: Icon(Icons.help),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => DialogFlow()),
+                );
+              },
+            ),
+          ],
         ),
         centerTitle: true,
       ),

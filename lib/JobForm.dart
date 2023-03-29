@@ -3,6 +3,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:zero_hunger/Constants/JobGreetings.dart';
 
+import 'DialogFlow.dart';
+
 class JobForm extends StatefulWidget {
   const JobForm({super.key});
 
@@ -26,7 +28,15 @@ class _JobFormState extends State<JobForm> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text('Application Form'),
-            Icon(Icons.help),
+            InkWell(
+              child: Icon(Icons.help),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => DialogFlow()),
+                );
+              },
+            ),
           ],
         ),
       ),

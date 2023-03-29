@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:zero_hunger/HarvestPaymentPage.dart';
 
+import 'DialogFlow.dart';
 import 'Searching_Options/constants.dart';
 
 class Harvest extends StatelessWidget {
@@ -18,9 +19,14 @@ class Harvest extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text('Harvest More'),
-            Icon(
-              Icons.help,
-              color: Colors.white,
+            InkWell(
+              child: Icon(Icons.help),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => DialogFlow()),
+                );
+              },
             ),
           ],
         ),
