@@ -11,6 +11,8 @@ class Harvest extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController controllerAccNo = TextEditingController();
+    TextEditingController controllerHolderName = TextEditingController();
     TextEditingController controllerMoney = TextEditingController();
     return Scaffold(
       appBar: AppBar(
@@ -52,7 +54,7 @@ class Harvest extends StatelessWidget {
                       fontSize: 15,
                       fontWeight: FontWeight.w500,
                     )),
-                controller: controllerMoney,
+                controller: controllerAccNo,
               ),
             ),
             Padding(
@@ -68,7 +70,7 @@ class Harvest extends StatelessWidget {
                       fontSize: 15,
                       fontWeight: FontWeight.w500,
                     )),
-                controller: controllerMoney,
+                controller: controllerHolderName,
               ),
             ),
             Padding(

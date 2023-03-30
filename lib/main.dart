@@ -142,7 +142,7 @@ class SplashScreenState extends State<SplashScreen> {
       home: Scaffold(
         body: SingleChildScrollView(
           child: Container(
-            height: 700,
+            height: double.infinity,
             width: 1000,
             padding: EdgeInsets.fromLTRB(50, 250, 50, 100),
             child: Center(
